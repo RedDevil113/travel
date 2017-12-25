@@ -1,0 +1,623 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #fff
+	opacity: .5
+
+*:-moz-placeholder
+	color: #fff
+	opacity: .5
+
+*::-moz-placeholder
+	color: #fff
+	opacity: .5
+
+*:-ms-input-placeholder
+	color: #fff
+	opacity: .5
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	border-color: red
+body input:required:valid,
+body textarea:required:valid
+	border-color: green
+
+* 
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	outline: none
+
+a, a:hover, a:focus, a:active, a:visited
+	text-decoration: none
+	transition: .3s linear
+
+li 
+	list-style: none
+
+body
+	line-height: 1.3
+	font-family: $CourierStd
+	overflow-x: hidden
+	opacity: 1
+	font-size: 18px
+	color: #000
+	background: #fcf8f6
+	&.body-lang__ru
+		font-family: 'Roboto Mono', monospace
+
+p 
+	font-weight: 300
+
+h1,h2,h3,h4,h5,h6
+	font-weight: 300
+
+img
+	max-width: 100%
+	height: auto
+
+.wrapper
+	max-width: 1050px
+	margin: 0 auto
+	padding: 0 10px
+
+.header
+	z-index: 100
+	background: transparent
+	&-logo
+		top: 45px
+		left: 42px
+		position: absolute
+		display: block
+		height: 91px
+	&-nav
+		padding: 98px 42px
+
+#cd-lateral-nav a
+	color: #000
+
+.nav
+	&-title
+		font-size: 24px
+		margin-bottom: 12px
+		line-height: 1
+		&__active
+			padding: 3px 7px 0 15px
+			background: #ffeada
+			display: inline-block
+		&__folow
+			margin-bottom: 8px
+
+#cd-lateral-nav a
+	padding: 0
+	line-height: 1
+
+.navigation-list
+	margin-bottom: 33px
+
+.nav-work
+	margin-bottom: 40px
+
+#cd-lateral-nav .cd-navigation__item
+	font-size: 19px
+	a 
+		padding: 12px 0
+		color: #000
+		&:hover
+			color: $main
+
+.navigation-social
+	display: flex
+	flex-flow: row wrap
+	margin-bottom: 30px
+	&__item
+		text-align: center
+		margin-right: 10px
+		a 
+			display: block
+			border: 2px solid #000
+			border-radius: 50%
+			width: 36px
+			height: 36px
+			&:hover
+				border-color: $main
+		img
+			max-height: 25px
+			max-width: 22px
+			margin-top: 5px
+#cd-menu-trigger
+	width: 82px
+	height: 33px
+	background: $main
+	padding: 3px 9px
+	top: 40px
+	right: 42px
+	.cd-menu-text
+		line-height: .5
+		font-size: 25px
+		color: #000
+
+.navigation-langs
+	display: flex
+	flex-flow: row wrap
+	&__item
+		position: relative
+		&:first-child
+			&::after
+				content: '/'
+				font-size: 23px
+				position: absolute
+				right: -9px
+				top: 3px
+		a
+			font-size: 23px
+			padding: 6px 4px 6px 8px!important
+			display: block
+			color: #000
+			line-height: 1
+		&-active
+			background: #ffefac
+
+.navigation-close
+	height: 35px
+	width: 35px
+	position: absolute
+	top: 40px
+	left: 50%
+	background-size: contain!important
+	transform: translate(-50%, 0)
+	cursor: pointer
+.banner
+	position: relative
+
+.cd-main-content
+	min-height: 100%
+	z-index: 99
+
+/* -- banner -- */
+.cd-main-content
+	padding: 0
+
+.cd-menu-icon
+	display: none!important
+
+.banner
+	background: #ffeada
+	&-wrap
+		position: relative
+		padding: 95px 5px
+		margin: 0 auto
+		max-width: 1230px
+		overflow: hidden
+		.slick-list
+			overflow: visible
+	&-langs
+		position: absolute
+		bottom: 25px
+		right: 5px
+	&-slide
+		height: 560px
+		background-size: cover!important
+		background-position: center right!important
+		position: relative
+		&__link
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index: 9
+		&__descr
+			position: absolute
+			top: 200px
+			left: 48px
+			color: #000
+			&-subtitle
+				font-size: 18px
+				span
+					background: #f7eaa9
+					line-height: 1
+					display: inline-block
+					padding: 6px 18px 6px 2px
+					color: #000
+			&-title
+				font-size: 59px
+				max-width: 500px
+				line-height: 1
+				span
+					background: $main
+					line-height: 1
+					display: inline-block
+					padding: 5px 32px 10px 6px
+					color: #000
+
+.banner-slider__arrow-text
+	position: absolute
+	top: 50%
+	font-size: 16px
+	color: #000
+	z-index: 97
+
+.banner-slider__prev-text
+	left: -100px
+	transform: translate(-45%,-50%) rotate(-90deg)
+
+.banner-slider__next-text
+	right: -100px
+	transform: translate(45%,-50%) rotate(90deg)
+
+.slick-arrow
+	position: absolute
+	top: 50%
+	transform: translate(0%,-50%)
+	width: 25px
+	height: 35px
+	background-repeat: no-repeat!important
+	background-size: contain!important
+	z-index: 50
+
+.slick-next
+	right: -60px
+	background: url(../img/arrow-right.svg)
+
+.slick-prev
+	left: -60px
+	background: url(../img/arrow-left.svg)
+
+/* -- about -- */
+.about
+	background: #fa9c79
+	padding: 75px 0 100px
+	&-last
+		background: #ffeea4
+	&-wrap
+		background-size: cover!important
+		background-position: top center!important
+		background-repeat: no-repeat!important
+		max-width: 1175px
+		padding: 0 10px
+		margin: 0 auto
+		min-height: 620px
+		padding-top: 50px
+	&-text
+		font-size: 59px
+		line-height: 1.25
+		letter-spacing: .1px
+
+/* -- content -- */
+.content
+	padding: 65px 0
+	&-article
+		padding-bottom: 150px!important
+	&-title
+		letter-spacing: .1px
+		font-size: 36px
+		margin-bottom: 85px
+		text-align: center
+		font-weight: 400
+		&__two
+			margin-bottom: 35px
+	&-wrap
+		display: flex
+		flex-flow: row wrap
+		max-width: 1050px
+		margin: 0 auto
+		&__more
+			font-size: 19px
+			display: inline-block
+			margin-top: 15px
+			padding: 2px 28px 7px 16px
+			background: $main
+			color: #000
+			line-height: 1
+	&-more
+		text-align: center
+	&-column
+		padding: 0 10px
+		&__1,&__3
+			width: 26.2%
+		&__2
+			width: 47.6%
+		&__4
+			width: 52.4%
+			display: flex
+			flex-flow: row wrap
+			padding: 0
+		&__5
+			width: 47.6%
+	&-post
+		background-size: cover!important
+		position: relative
+		margin-bottom: 20px
+		&__link
+			z-index: 10
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+		&__descr
+			position: absolute
+			bottom: 20px
+			left: 20px
+			&-subtitle
+				font-size: 12px
+				span
+					padding: 3px 6px 6px 9px
+					line-height: 1
+					background: #e6e4a8
+					display: inline-block
+			&-title
+				margin-left: 1px
+				line-height: .6
+				font-weight: 500
+				max-width: 250px
+				span
+					font-size: 16px
+					background: #e6f3f9
+					display: inline-block
+					padding: 8px 16px 13px 10px
+					letter-spacing: .1px
+				&__span1
+					padding-right: 30px!important
+		&__small
+			height: 255px
+			width: 100%
+		&__big
+			height: 529px
+			width: 100%
+		&__long
+			height: 255px
+			width: 100%
+		&__descr
+			&-big
+				&__subtitle
+					font-size: 12px
+					margin-left: 6px
+					span
+						background: #f7eaa9
+						line-height: 1
+						display: inline-block
+						padding: 6px 18px 6px 2px
+				&__title
+					font-size: 41px
+					max-width: 500px
+					line-height: 1
+					font-weight: 500
+					span
+						background: $main
+						line-height: .9
+						display: inline-block
+						padding: 15px 8px 18px 4px
+.content-post__big-span1
+	margin-left: 6px
+	padding: 12px 8px 4px 4px!important
+.content-post__big-span2
+	padding: 5px 8px 18px 4px!important
+
+.small-post__wrap
+	width: 50%
+	padding: 0 10px
+
+.long-post__wrap
+	width: 100%
+	padding: 0 10px
+
+/* -- map -- */
+.map
+	padding: 60px 0 20px
+	&-title
+		letter-spacing: .1px
+		font-size: 35px
+		text-align: center
+		font-weight: 400
+	&-wrap
+		max-width: 1300px
+		padding: 0 10px
+		margin: 0 auto
+		height: 743px
+		background-size: cover!important
+		background-position: top center!important
+		position: relative
+	&-country
+		display: inline-block
+		position: absolute
+		&__europe
+			left: 51.5%
+			top: 28.5%
+		&__asia
+			left: 73.8%
+			top: 37%
+		&__northAmerica
+			left: 13%
+			top: 29%
+		&__southAmerica
+			left: 23%
+			top: 65.7%
+		&__africa
+			left: 49.7%
+			top: 53.9%
+		&__australia
+			left: 81%
+			top: 78%
+		&__name
+			font-size: 20px
+			color: #000
+			line-height: .9
+			background: $main
+			padding: 3px 33px 13px 7px
+			letter-spacing: .6px
+			display: inline-block
+			cursor: pointer
+			font-weight: 300
+			a 
+				color: #000
+		&__list
+			display: none
+			z-index: 10
+			position: relative
+		&__item
+			font-size: 15px
+			a 
+				color: #000
+				padding: 18px 48px 9px 14px
+				letter-spacing: .2px
+				background: #fff 
+				display: block
+				line-height: .9
+
+/* -- footer -- */
+.footer
+	padding: 5px 0 20px
+	&-wrap
+		max-width: 1145px
+		padding: 0 5px
+		margin: 0 auto
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+	&-column
+		width: 50%
+		&:last-child
+			justify-content: flex-end
+			display: flex
+		&__list
+			display: flex
+			flex-flow: row wrap
+		&__item
+			letter-spacing: .6
+			font-size: 16px
+			&:last-child
+				padding-left: 25px
+			a 
+				color: #000
+				&:hover
+					color: $main
+
+/* -- page404 -- */
+.page404
+	min-height: 100vh
+	background: #ffeea4
+	&-wrap
+		padding: 100px 35px 0
+		max-width: 1100px
+		margin: 0 auto
+	&-title
+		letter-spacing: .1px
+		font-size: 59px
+		background: #fffdf6
+		display: inline-block
+		padding: 5px 28px 2px 15px
+		margin-bottom: 22px
+	&-text
+		font-size: 19px
+		color: #000
+		padding-left: 15px
+
+/* - post -- */
+.article
+	padding: 125px 0 0
+	&-row
+		display: flex
+		flex-flow: row wrap
+		margin-bottom: 90px
+		&__last
+			margin-bottom: 80px
+	&-column
+		width: 50%
+		&__last
+			align-items: center
+			display: flex
+		&__first
+			padding-right: 70px
+		&__right
+			padding-left: 70px
+		p
+			font-size: 16px
+			line-height: 19px
+			margin-bottom: 25px
+			&:nth-child(3)
+				margin-bottom: 0
+
+p.article-column__title
+	font-size: 36px
+	line-height: 1.1
+	margin-bottom: 0
+
+.share
+	padding: 50px 0 80px
+	text-align: center
+	.wrapper
+		max-width: 1070px
+		padding: 0 20px
+	&-title
+		font-size: 36px
+		letter-spacing: .2px
+		background: #ff8349
+		display: inline-block
+		margin: 0 auto 10px
+		padding: 8px 30px 11px 15px
+	&-list
+		display: flex
+		flex-flow: row wrap
+		transform: rotate(1.5deg)
+		max-width: 339px
+		margin: 0 auto
+		justify-content: space-between
+		background: #ff8349
+
+.content-wrap__all
+	background: #faa585
+
+.ya-share2__list
+	display: flex
+
+.ya-share2__container_size_m
+	width: 100%
+
+.ya-share2__item
+	width: 25%
+	height: 70px
+	.ya-share2__icon
+		background-size: 40px!important
+		background-position: center!important
+		background-repeat: no-repeat!important
+		width: 100%
+		height: 100%
+		display: block
+	a 
+		display: block
+		width: 100%
+		height: 100%
+		background: #ff8349
+	img
+		max-height: 45px
+		max-width: 40px
+		height: 100%
+		width: 100%
+	.ya-share2__badge
+		background: transparent
+		width: 100%
+		height: 100%
+		display: block
+
+.ya-share2__item_service_vkontakte
+	.ya-share2__icon
+		background: url(../img/vk.svg)
+
+.ya-share2__item_service_facebook
+	.ya-share2__icon
+		background: url(../img/facebook.svg)
+
+.ya-share2__item_service_odnoklassniki
+	.ya-share2__icon
+		background: url(../img/odnoklassniki.svg)
+
+.ya-share2__item_service_twitter
+	.ya-share2__icon
+		background: url(../img/twitter.svg)
+
+@import "_media"
